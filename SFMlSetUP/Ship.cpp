@@ -48,25 +48,25 @@ Ship::~Ship()
 
 void Ship::Draw(sf::RenderWindow& window)
 {
-	sf::Vector2f curPos = ship->getPosition();
-	
-	
-	
-	
-	sf::Vector2f position = sf::Vector2f(100, 100);
-	sf::Vector2f GoalDistance = sf::Vector2f(position.x - curPos.x, position.y - curPos.y);
-	sf::Vector2f heading = sf::Vector2f(0, 80 - curPos.y);
-	sf::Vector2f NTP;
-	sf::Vector2f NH;
+	//sf::Vector2f curPos = ship->getPosition();
+	//
+	//
+	//
+	//
+	//sf::Vector2f position = sf::Vector2f(100, 100);
+	//sf::Vector2f GoalDistance = sf::Vector2f(position.x - curPos.x, position.y - curPos.y);
+	//sf::Vector2f heading = sf::Vector2f(0, 80 - curPos.y);
+	//sf::Vector2f NTP;
+	//sf::Vector2f NH;
 
-	float mag1 = sqrt(pow(GoalDistance.x, 2) + pow(GoalDistance.y, 2));
-	float mag2 = sqrt(pow(heading.x, 2) + pow(heading.y, 2));
-	const float PI = 3.14159265;
-	NTP.x = GoalDistance.x / mag1; NTP.y = NTP.y / mag1;
-	NH.x = heading.x / mag2; NH.y = heading.y / mag2;
-	float dotproduct;
+	//float mag1 = sqrt(pow(GoalDistance.x, 2) + pow(GoalDistance.y, 2));
+	//float mag2 = sqrt(pow(heading.x, 2) + pow(heading.y, 2));
+	//const float PI = 3.14159265;
+	//NTP.x = GoalDistance.x / mag1; NTP.y = NTP.y / mag1;
+	//NH.x = heading.x / mag2; NH.y = heading.y / mag2;
+	//float dotproduct;
 
-	dotproduct = (GoalDistance.x * heading.x) + (GoalDistance.y * heading.y);//dot product
+	//dotproduct = (GoalDistance.x * heading.x) + (GoalDistance.y * heading.y);//dot product
 	/*if (curPos.x < position.x) {
 		ship->setRotation(acos(dotproduct));
 
