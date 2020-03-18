@@ -10,7 +10,8 @@ Game::Game()
 {
 	
 	window = new sf::RenderWindow(sf::VideoMode(800, 600), "SFML Starter Template");
-	ship = new Ship(window->getSize());
+	ship = new Ship(window->getSize(), 100.f, 100.f);
+
 
 
 
@@ -71,7 +72,7 @@ void Game::Loop()
 		if (ship->GetShape()->getGlobalBounds().intersects(asteroids->GetShape().getGlobalBounds()))
 		{
 			Lives--;
-			ship = new Ship(window->getSize());
+			ship = new Ship(window->getSize(), 100, 100);
 			if (Lives == 0)//This is where I have set the lives to three.
 			{
 				window->close();
@@ -81,7 +82,7 @@ void Game::Loop()
 		if (ship->GetShape()->getGlobalBounds().intersects(blackHole->GetShape().getGlobalBounds()))
 		{
 			Lives--;
-			ship = new Ship(window->getSize());
+			ship = new Ship(window->getSize(), 100, 100);
 			if (Lives == 0)//This is where I have set the lives to three.
 			{
 				window->close();
@@ -90,7 +91,7 @@ void Game::Loop()
 		if (ship->GetShape()->getGlobalBounds().intersects(blackHole2->GetShape().getGlobalBounds()))
 		{
 			Lives--;
-			ship = new Ship(window->getSize());
+			ship = new Ship(window->getSize(), 100, 100);
 			if (Lives == 0)//This is where I have set the lives to three.
 			{
 				window->close();
